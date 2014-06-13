@@ -6,6 +6,10 @@
 %% /usr/share/texmf/tex/latex/base/book.cls
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
+%% [13 Juin 2014]
+%% - Mise à disposition du gabarit sur BitBucket
+%%
+%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [11 Juin 2014]
 %% - Fusion des deux langues du gabarit, avec choix dans options de la classe
 %% - Définition de variables \biband, \bibed et \fg \og (pour babel english) pour adapter le style bibliographique à la %%   langue.
