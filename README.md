@@ -9,6 +9,6 @@ Pour toute question relative à l'utilisation du gabarit, veuillez vous adresser
 
 ### English ###
 
-This repository has been created for ETS' students to be able to suggest modifications and corrections to the thesis and dissertation latex formatting template.
+This repository has been created for ÉTS' students to be able to suggest modifications and corrections to the thesis and dissertation latex formatting template.
 
-If you have any question about the usage of the template, please contact the latex support at support-latex@livia.etsmtl.ca. 
+If you have any question about the usage of the template, please contact ÉTS' latex support at support-latex@livia.etsmtl.ca.
