@@ -10,6 +10,9 @@
 %% - Correction de la mise en page de la liste des algorithmes pour la version anglaise
 %% - Correction de diverses coquilles dans la page de guarde (merci à Miguel De la Torre)
 %%
+%% [13 Juin 2014]
+%% - Mise à disposition du gabarit sur BitBucket
+%%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [11 Juin 2014]
 %% - Fusion des deux langues du gabarit, avec choix dans options de la classe
