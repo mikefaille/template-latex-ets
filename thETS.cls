@@ -6,6 +6,10 @@
 %% /usr/share/texmf/tex/latex/base/book.cls
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
+%% [20 Novembre 2014]
+%% - Correction de la mise en page de la liste des algorithmes pour la version anglaise
+%% - Correction de diverses coquilles dans la page de guarde (merci à Miguel De la Torre)
+%%
 %% [13 Juin 2014]
 %% - Mise à disposition du gabarit sur BitBucket
 %%
@@ -377,7 +381,13 @@
 
 \ifthenelse{\equal{\WithAlgoTe}{true}}
 {
-	\RequirePackage[french,boxed,algochapter]{algorithm2e}
+	\ifthenelse{\equal{\DocLang}{francais}}
+	{
+		\RequirePackage[french,boxed,algochapter]{algorithm2e}
+	}
+	{
+		\RequirePackage[boxed,algochapter]{algorithm2e}
+	}
 	\SetAlCapSkip{0.5\baselineskip}
 	\SetAlCapFnt{\normalfont}
 	\SetAlTitleFnt{normalfont}
@@ -552,7 +562,7 @@
   \newcommand{\TxtJury}{\genTxtJury}
   \newcommand{\NomJury}{#2}
   \newcommand{\AffilJury}{#3}
-  \rewcommand{\PlusTxtJury}{#4}
+  \newcommand{\PlusTxtJury}{#4}
   }%
   
 %% Membre du jury 2
@@ -608,13 +618,16 @@
 \setlength{\tocLeftMarginSecondLineChapter}{6.1em} % Marge gauche quand on va à la ligne pour les chapitres et annexes
 \newlength{\tocLeftMarginSecondLineFigure}
 \setlength{\tocLeftMarginSecondLineFigure}{6.5em} % Marge gauche quand on va à la ligne pour les figures
+\newlength{\tocLeftMarginSecondLineAlgo}
 \newlength{\tocLeftMarginSecondLineTable}
 \ifthenelse{\equal{\DocLang}{francais}}
 {
 	\setlength{\tocLeftMarginSecondLineTable}{7em} % Marge gauche quand on va à la ligne pour les tableaux.
+	\setlength{\tocLeftMarginSecondLineAlgo}{8.6em} % Marge gauche quand on va à la ligne pour les algos
 }
 {
 	\setlength{\tocLeftMarginSecondLineTable}{6em} % Marge gauche quand on va à la ligne pour les tableaux.
+	\setlength{\tocLeftMarginSecondLineAlgo}{8.1em} % Marge gauche quand on va à la ligne pour les algos
 }
 
 \renewcommand{\@pnumwidth}{3em}
@@ -680,7 +693,7 @@
     {
     	\ifthenelse{\equal{\TypeDoc}{memoire}}
     	{THE DEGREE OF\\MASTER OF SCIENCE\\M.Sc.A.}
-    	{THE DEGREE OF\\DOCTOR OF PHILOSOPHY\\Ph.D.}
+    	{THE DEGREE OF DOCTOR OF PHILOSOPHY\\Ph.D.}
     }
 }  
 
@@ -959,6 +972,7 @@
 %% Modification des chapitres numérotés
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makechapterhead}[1]{{
+	\thispagestyle{empty}
         \begin{center}
         \singlespacing\normalfont\normalsize\bfseries
         \etchapterheadstyle{\@chapapp{ \thechapter}} % CHAPTER 1
@@ -976,6 +990,7 @@
 %% Modification des chapitres sans numéro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makeschapterhead}[1]{{
+	\thispagestyle{empty}
         \begin{center}
          \singlespacing\normalfont\normalsize\bfseries
         \etchapterheadstyle{#1} % TITLE OF CHAPTER
@@ -1056,7 +1071,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Abstract
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{abstractTemplate}[3]{%
+\newenvironment{abstractTemplate}[4]{%
+  \newcommand\KeyWordsName{#4}
   \newcommand\KeyWords{#3}
   \if@twocolumn
      \@restonecoltrue\onecolumn%
@@ -1077,10 +1093,10 @@
 }
 {
   \vspace{2\baselineskip} %Ajout de 3 retours à la ligne avant les Mot clés
-  {\bf Keywords:} % \KeyWords
+  {\KeyWordsName} % \KeyWords
   %% tabulation Nicolas Lussier-Clément 2012
   \newdimen\stringwidth
-  \setbox0=\hbox{\bf Keywords:}
+  \setbox0=\hbox{\KeyWordsName}
   \stringwidth=\wd0
   \hspace{-\stringwidth} \hspace{0.75in}
   \begin{minipage}[t]{5.3in} %
@@ -1094,13 +1110,13 @@
 
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\newenvironment{sommaire}[1]{\abstractTemplate{\@title}{RÉSUMÉ}{#1}}{\endabstractTemplate}
-	\newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRACT}{#2}}{\endabstractTemplate}
+	\newenvironment{sommaire}[1]{\abstractTemplate{\@title}{RÉSUMÉ}{#1}{\bf Mots clés:}}{\endabstractTemplate}
+	\newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRACT}{#2}{\bf Keywords:}}{\endabstractTemplate}
 
 }
 {
-	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}}{\endabstractTemplate}
-	\newenvironment{summary}[2]{\abstractTemplate{#1}{SUMMARY}{#2}}{\endabstractTemplate}
+	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
+	\newenvironment{summary}[2]{\abstractTemplate{#1}{SUMMARY}{#2}{\bf Mots clés:}}{\endabstractTemplate}
 }
 
 
@@ -1383,7 +1399,7 @@
       \parindent \z@ \rightskip \tocRightMargin%
       \parfillskip -\tocRightMargin%
      \leavevmode \normalsize%
-     \advance\leftskip \tocLeftMarginSecondLineFigure%
+     \advance\leftskip \tocLeftMarginSecondLineAlgo%
       \hskip -\leftskip%
       {\algorithmname\mbox{\hspace{4pt}}#1}%\nobreak%
        \leaders\hbox{$\m@th%
@@ -1768,7 +1784,12 @@
 \addto\captionsfrench{\def\listfigurename{{Liste des figures}}}
 \addto\captionsfrench{\def\listalgorithmename{{Liste des algorithmes}}}
 \addto\captionsfrench{\def\CaptionSeparator{{\space\space}}}
-}{}
+}
+{
+\def\listalgorithmename{{List of algorithms}}
+\def\algorithmname{{Algorithm}}
+
+}
 
 
 
@@ -1824,7 +1845,7 @@
  \parbox{\textwidth}{\center
   \artAuthSepfalse
   \artAuthScan#1\relax
-  ,\\
+  \\
   \artAffSepfalse
   \artAffScan#2\relax
   }
@@ -1834,12 +1855,11 @@
   \ifx\relax#1\empty
   \else
     \ifartAuthSep
-      , \relax
+     , \relax
     \else
       \artAuthSeptrue
     \fi
-   	#1 \relax
-    \expandafter\artAuthScan
+      #1\relax\expandafter\artAuthScan
   \fi
 }
 

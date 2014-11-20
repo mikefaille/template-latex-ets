@@ -333,8 +333,8 @@ FUNCTION {format.full.names}
     {
       %s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't :=
       nameptr #1 >
-      { s nameptr "{ff~}{vv~}{ll}{, jj}" format.name$ 't := }
-      { s nameptr "{vv~}{ll}{,jj}{, ff}" format.name$ 't := }
+      { s nameptr "{f.~}{vv~}{ll}{, jj}" format.name$ 't := }
+      { s nameptr "{vv~}{ll}{,jj}{, f.}" format.name$ 't := }
       if$
       nameptr #1 >
         { namesleft #1 >
