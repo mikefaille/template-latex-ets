@@ -6,6 +6,17 @@
 %% /usr/share/texmf/tex/latex/base/book.cls
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
+%% [17 Avril 2015]
+%% - L'abstract francais est maintenant intitule "Resume" dans la version anglaise
+%% - Correction de la marge des footnotes
+%% - Correction des titres des membres du jury
+%%
+%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
+%% [13 Mars 2015]
+%% - Utilisation de l'environnement "revuedelitterature" (ou "literaturereview" en anglais) pour les theses par article au lieu d'une section numerotee
+%% - Deplacement de la legende des algorithmes sur le dessus avec le package algorithm2e
+%%
+%% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [20 Novembre 2014]
 %% - Correction de la mise en page de la liste des algorithmes pour la version anglaise
 %% - Correction de diverses coquilles dans la page de guarde (merci à Miguel De la Torre)
@@ -23,7 +34,6 @@
 %% [07 Mai 2014]
 %% - Correction de l'espace entre le titre du chapitre et le début du texte
 %% - Ajout d'une fonction de présentation des noms et affiliations des auteurs pour une thèse par articles 
-%%
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [28 Mars 2014]
@@ -391,6 +401,7 @@
 	\SetAlCapSkip{0.5\baselineskip}
 	\SetAlCapFnt{\normalfont}
 	\SetAlTitleFnt{normalfont}
+	\renewcommand{\@algocf@capt@boxed}{above}% Placement de la caption sur le dessus
 }{}
 
 
@@ -422,21 +433,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% En Francais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\genTxtDirTh}{directeur de thèse}  
-\newcommand{\genTxtDirM}{directeur de mémoire}  
+\newcommand{\genTxtDirTh}{Directeur de Thèse}  
+\newcommand{\genTxtDirM}{Directeur de Mémoire}  
 
-\newcommand{\genTxtDirThF}{directrice de thèse}  
-\newcommand{\genTxtDirMF}{directrice de mémoire} 
+\newcommand{\genTxtDirThF}{Directrice de Thèse}  
+\newcommand{\genTxtDirMF}{Directrice de Mémoire} 
 
 
-\newcommand{\genTxtCoDir}{codirecteur}  
-\newcommand{\genTxtCoDirF}{codirectrice}  
+\newcommand{\genTxtCoDir}{Co-directeur}  
+\newcommand{\genTxtCoDirF}{Co-directrice}  
 
-\newcommand{\genTxtPres}{président du jury}  
-\newcommand{\genTxtPresF}{présidente du jury}  
+\newcommand{\genTxtPres}{Président du Jury}  
+\newcommand{\genTxtPresF}{Présidente du Jury}  
 
-\newcommand{\genTxtExamExt}{examinateur externe}  
-\newcommand{\genTxtExamExtF}{examinatrice externe} 
+\newcommand{\genTxtExamExt}{Examinateur Externe}  
+\newcommand{\genTxtExamExtF}{Examinatrice Externe} 
 
 \newcommand{\genTxtJury}{membre du jury}  
 }
@@ -444,23 +455,23 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% En Anglais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\genTxtDirTh}{thesis director}  
-\newcommand{\genTxtDirM}{memorandum director}  
+\newcommand{\genTxtDirTh}{Thesis Supervisor}  
+\newcommand{\genTxtDirM}{Memorandum Supervisor}  
 
 \newcommand{\genTxtDirThF}{\genTxtDirTh}  
 \newcommand{\genTxtDirMF}{\genTxtDirM} 
 
 
-\newcommand{\genTxtCoDir}{co-advisor}  
+\newcommand{\genTxtCoDir}{Co-supervisor}  
 \newcommand{\genTxtCoDirF}{\genTxtCoDir}  
 
-\newcommand{\genTxtPres}{committee president}  
+\newcommand{\genTxtPres}{President of the Board of Examiners}  
 \newcommand{\genTxtPresF}{\genTxtPresF}  
 
-\newcommand{\genTxtExamExt}{external examiner}  
+\newcommand{\genTxtExamExt}{External Examiner}  
 \newcommand{\genTxtExamExtF}{\genTxtExamExt} 
 
-\newcommand{\genTxtJury}{invited examiner}  
+\newcommand{\genTxtJury}{Member of the jury}  
 }
 
 %% Directeur de thèse
@@ -595,7 +606,6 @@
 \newlength{\largChap}
 \newlength{\largNum}
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Marges autour des objets flottants : figures et tableaux
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -668,17 +678,20 @@
 \clubpenalty=10000
 \raggedbottom
 
-%% Pour enlever l'indentation des footnotes (LUIS)
+%% Footnotes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newlength{\NameOfNewDefinedLength}
 
-\newcommand{\footnoteETS}[1]%
-{\footnote{\setlength{\NameOfNewDefinedLength}{\textwidth}
-                 \advance\leftskip -2.7mm  %%
-                 \addtolength{\NameOfNewDefinedLength}{-2em+2.mm}
-                 \hskip -1.mm
-                 \parbox[t]{\NameOfNewDefinedLength}{\raggedright #1}}}
+\newlength{\largFoot}
 
+\makeatletter
+\renewcommand{\@makefntext}[1]{%
+	\vspace{0.5em}	
+ 	\settowidth{\largFoot}{\up{\@thefnmark}\hspace{0.5em} }
+	\parindent -\largFoot
+	\setlength{\leftskip}{2.5em}
+	\setlength{\rightskip}{2.5em}
+	\up{\@thefnmark}\hspace{0.5em} #1
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Page titre
@@ -863,15 +876,7 @@
     \PrefPresid~\NomPresid,~\TxtPresid\\%
     \AffilPresid\par%
     \vspace{1em}%
-
-    % Examinateur externe
-    \ifdef{\NomExamExt}{
-      \PrefExamExt~\NomExamExt,~\TxtExamExt\\
-      \AffilExamExt\par%
-      \vspace{1em}
-    }{}
-    
-    
+        
  % Jury
     \ifdef{\NomJury}{
 	\PrefJury~\NomJury,~\TxtJury\\
@@ -885,6 +890,14 @@
       \PrefJuryB~\NomJuryB\ifthenelse{\equal{\PlusTxtJuryB}{}}{,~}{,~\PlusTxtJuryB}%
       \TxtJuryB\\%
       \AffilJuryB\par%
+      \vspace{1em}
+    }{}
+    
+    
+    % Examinateur externe
+    \ifdef{\NomExamExt}{
+      \PrefExamExt~\NomExamExt,~\TxtExamExt\\
+      \AffilExamExt\par%
       \vspace{1em}
     }{}
       
@@ -1116,7 +1129,7 @@
 }
 {
 	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
-	\newenvironment{summary}[2]{\abstractTemplate{#1}{SUMMARY}{#2}{\bf Mots clés:}}{\endabstractTemplate}
+	\newenvironment{summary}[2]{\abstractTemplate{#1}{RÉSUMÉ}{#2}{\bf Mots clés:}}{\endabstractTemplate}
 }
 
 
@@ -1203,16 +1216,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Revue de littérature
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newenvironment{revuedelitterature}{%
-  \cleardoublepage
-  \ifthenelse{\equal{\DocLang}{francais}}
-	{
-  	\chapter*{Revue de littérature}
-  	\addcontentsline{toc}{chapter}{REVUE DE LITTÉRATURE} % Ajout dans la table des matières
+
+\ifthenelse{\equal{\DocLang}{francais}}
+{
+	\newenvironment{revuedelitterature}{%
+  		\cleardoublepage
+  		\chapter*{Revue de littérature}
+  		\addcontentsline{toc}{chapter}{REVUE DE LITTÉRATURE} % Ajout dans la table des matières
+  		\stepcounter{chapter}
   	}
-  	{
-  	\chapter*{Literature review}
-  	\addcontentsline{toc}{chapter}{LITERATURE REVIEW} % Ajout dans la table des matières
+}
+{
+	\newenvironment{literaturereview}{%
+  		\cleardoublepage
+  		\chapter*{Literature review}
+  		\addcontentsline{toc}{chapter}{LITERATURE REVIEW} % Ajout dans la table des matières
+  		\stepcounter{chapter}
   	}
 }
 
@@ -1264,6 +1283,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Table des matières
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ifthenelse{\equal{\DocLang}{english}}
+{
+\addto\captionsenglish{
+  \renewcommand{\contentsname}%
+    {Table of Contents}%
+}
+}
+{}
 
 \renewcommand{\@dotsep}{1} % (\@dotsep est une valeur)
 

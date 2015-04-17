@@ -49,6 +49,7 @@ ENTRY
     author
     booktitle
     chapter
+    day
     doi
     eid
     edition
@@ -452,6 +453,27 @@ FUNCTION {format.date}
   extra.label *
 }
 
+FUNCTION {format.date.full}
+{ year duplicate$ empty$
+    { "empty year in " cite$ * warning$
+       pop$ "" }
+    'skip$
+  if$
+  month empty$
+    'skip$
+    { month
+      " " * swap$ *
+    }
+  if$
+    day empty$
+    'skip$
+    { day
+      " " * swap$ *
+    }
+  if$
+  extra.label *
+}
+
 
 FUNCTION {format.address.year.par}
 { 
@@ -476,6 +498,22 @@ year empty$
 if$
 
 } 
+
+FUNCTION {format.patent.type}
+{ number duplicate$ empty$
+    { "empty number in " cite$ * warning$
+       pop$ "" }
+    'skip$
+  if$
+  type empty$
+    'skip$
+    { type
+      " " * swap$ *
+    }
+  if$
+  extra.label *
+}
+
 
 FUNCTION {format.btitle}
 { title emphasize
@@ -1224,6 +1262,29 @@ FUNCTION {software}
   "Logiciel" output
   new.block
   note output
+  fin.entry
+}
+
+FUNCTION {patent}
+{ output.bibitem
+  author.full "author" output.check
+  author format.key output
+  new.block	% Pour ajouter un point après les noms d'auteurs
+  format.date.full "year" output.check
+  new.block
+  format.title emphasize "title" output.check
+  new.block
+  format.patent.type output.nonnull
+  new.block	
+  howpublished new.block.checka
+  howpublished output
+  new.block	
+  publisher empty$
+      {format.tr.lieu.nom output.nonnull}
+      {format.book.lieu.editeur output.nonnull}
+   	if$
+  format.url output
+  new.block
   fin.entry
 }
 
