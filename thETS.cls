@@ -351,21 +351,6 @@
   \RequirePackage[english]{babel}
 }
 
-
-
-
-\usepackage{ifxetex}
-%%http://tex.stackexchange.com/questions/54573/encoding-error-when-changing-from-latex-to-xetex-engine-in-emacs-auctex
-
-
-%\usepackage{polyglossia}
-%\usepackage[cm-default]{fontspec}
-%\usepackage{lmodern}
-%  \usepackage{fontspec}
-%   \usepackage[utf8x]{inputenc}
-
-
-
 \RequirePackage{calc} %% permet de réaliser des additions et soustractions de valeurs lors d'affectation de variables
 \RequirePackage{setspace}
 
