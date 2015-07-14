@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 %% Modèle LaTeX pour le mémoire de thèse de l'ETS
-%% Basé sur la classe de base book.cls, généralement positionné 
+%% Basé sur la classe de base book.cls, généralement positionné
 %% dans un système linux à
 %% /usr/share/texmf/tex/latex/base/book.cls
 %%
@@ -33,7 +33,7 @@
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [07 Mai 2014]
 %% - Correction de l'espace entre le titre du chapitre et le début du texte
-%% - Ajout d'une fonction de présentation des noms et affiliations des auteurs pour une thèse par articles 
+%% - Ajout d'une fonction de présentation des noms et affiliations des auteurs pour une thèse par articles
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [28 Mars 2014]
@@ -77,7 +77,7 @@
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [28 Nov 2012]
 %% - Bonne numerotation des equation dans annexes
-%% 
+%%
 %% Modifications par Nicolas Gasset (nicolas.gasset.1@ens.etsmtl.ca)
 %% [28 Nov 2012]
 %% - Deplace l'appel des paquets amsthm et caption apres hyperref (necessaire pour eviter problemes)
@@ -181,8 +181,8 @@
 %%
 %% Modifications par Christophe Pagano (cpagano@livia.etsmtl.ca)
 %% [30 Mars 2011]
-%% modification de l'affichage des titres des chapitres dans le TOC. Le nom et numéro sont maintenant dans 
-%% une box de 7em, ce qui aligne les titres. 
+%% modification de l'affichage des titres des chapitres dans le TOC. Le nom et numéro sont maintenant dans
+%% une box de 7em, ce qui aligne les titres.
 %% changement de la notation des figures: Exemple Figure-A V-1. Aussi, pas en gras.
 %% Changement de l'ordre d'apparition du jury: examinateur externe avant membre du jury.
 %%
@@ -217,22 +217,22 @@
 %%
 %% Commentaires (et modifications?) par Luis Da Costa (costa@livia.etsmtl.ca)
 %%
-%% [14 Juillet 2006]  
-%% Il faut laisser une ligne en blanc AVANT et APRES une citation de plus de 3 lignes: 
-%% 
-%% Zinedine Zidane a remarque 
+%% [14 Juillet 2006]
+%% Il faut laisser une ligne en blanc AVANT et APRES une citation de plus de 3 lignes:
+%%
+%% Zinedine Zidane a remarque
 %% [LIGNE EN BLANC]
-%% \begin{quote} 
-%%      parler de ma mere et de ma soeur merite bien un coup de boule. 
-%% \end{quote} 
+%% \begin{quote}
+%%      parler de ma mere et de ma soeur merite bien un coup de boule.
+%% \end{quote}
 %% [LIGNE EN BLANC]
-%%  
-%% [14 Juillet 2006] 
-%% Dans la table des matieres il doit y avoir une indentation. 
+%%
+%% [14 Juillet 2006]
+%% Dans la table des matieres il doit y avoir une indentation.
 %% J'ai donc commenté ce que Seb avait implementé (chercher LUIS dans ce document
-%% pour voir).  
-%% 
-%% Version 0.4 
+%% pour voir).
+%%
+%% Version 0.4
 %% Date : 2005/08/04
 %%
 %% Modifications par S. Piccand (sebastien.piccand@livia.etsmtl.ca)
@@ -249,7 +249,7 @@
 %%  - correction des citations utiliser \quote{} comme d'habitude
 %%
 %% Macros supplémentaires pour ajouter plus facilement des figures/tableaux et y faire référence
-%% 
+%%
 %% Non corrigé de la version 0.3 :
 %%  * Dans les différentes listes (figures, tables, etc.) il n'y a pas assez d'espace entre la fin
 %%     du titre et les numéros. Une solution consiste à utiliser des noms de figure courts.
@@ -260,31 +260,31 @@
 %%
 %% Version 0.3
 %% Date : 2004/12/17
-%% 
+%%
 %% Modifications par G. Tremblay (guillaume.tremblay@livia.etsmtl.ca)
-%% 
-%% thETS3 est basé sur thETS2 
-%% Quelques corrections apportées par rapport à la version 0.2: 
-%% 
+%%
+%% thETS3 est basé sur thETS2
+%% Quelques corrections apportées par rapport à la version 0.2:
+%%
 %% Utilisation de algorithme2e.sty sans problèmes de compatibilité. Correction faite par F. Grandidier
 %% et appliquée par G. Tremblay
-%% 
+%%
 %% Les citations de plus de 3 lignes sont à interligne simple tel qu'exigé par le Décanat (utilisez begin{quoteETS})
 %%
 %% Les footnotes sont remplacées par de footnoteETS pour ne pas avoir d'indentation de paragraphe
 %%
 %%
-%% Version 0.2 
+%% Version 0.2
 %% Date: 2003/05/06
-%% 
+%%
 %% Par F. Grandidier (gfrede@livia.etsmtl.ca)
 %%
 %% Ajout ver 0.2: alignement du titre du chapitre dans la table
 %%                des matières lorsqu'il tient sur plusieurs
 %%                lignes
-%% 
-%% 
-%% 
+%%
+%%
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \def\filedate{2003/01/24}
 
@@ -293,7 +293,7 @@
 
 %% Mêmes options possibles que celle de la classe book.cls
 %% Cependant tous ne va peut être pas marcher comme dans book...
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}} 
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 
 \newcommand{\TypeDoc}{empty}
 \newcommand{\DocLang}{francais}
@@ -305,7 +305,7 @@
 \DeclareOption{these}{%
 	\renewcommand{\TypeDoc}{these}
 }
-	
+
 \DeclareOption{memoire}{%
   \renewcommand{\TypeDoc}{memoire}
 }
@@ -333,24 +333,42 @@
 
 \LoadClass{book} %% Chargement de la classe book
 \RequirePackage{mathptmx,bm} %% Font times en equation, avec possibilité de bold
-\RequirePackage{helvet, courier} %% Times est obsolète
+
+\usepackage{fontspec}
+\setmainfont{Liberation Serif}
+\setmonofont{Liberation Mono}
+
+\usepackage{graphicx} %% http://tug.org/pipermail/xetex/2009-November/014995.html
+
 \RequirePackage{etoolbox}
+
+\newcommand{\up}{\textsuperscript}
+
 \RequirePackage{ifthen} %% Permet de réaliser des tests sur des variables
-
-\ifthenelse{\equal{\DocLang}{francais}}
-{
-	\RequirePackage[frenchb]{babel} %% Francisation du document
-}
-{
-	\RequirePackage[english]{babel}
-	\newcommand{\up}{\textsuperscript}
+\ifthenelse{\equal{\DocLang}{francais}}{
+  \RequirePackage[frenchb]{babel} %% Francisation du document
+ }{
+  \RequirePackage[english]{babel}
 }
 
-\RequirePackage[utf8]{inputenc} %% Prise en compte de la frappe de caractères accentués
-\RequirePackage[T1]{fontenc} %% Codage standard des fontes LaTeX pour le français
+
+
+
+\usepackage{ifxetex}
+%%http://tex.stackexchange.com/questions/54573/encoding-error-when-changing-from-latex-to-xetex-engine-in-emacs-auctex
+
+
+%\usepackage{polyglossia}
+%\usepackage[cm-default]{fontspec}
+%\usepackage{lmodern}
+%  \usepackage{fontspec}
+%   \usepackage[utf8x]{inputenc}
+
+
+
 \RequirePackage{calc} %% permet de réaliser des additions et soustractions de valeurs lors d'affectation de variables
 \RequirePackage{setspace}
-\RequirePackage[pdftex]{graphicx}
+
 \RequirePackage{amsfonts,amsmath,amssymb,amsbsy,amsxtra} %% a mettre avant hyperref
 \RequirePackage{longtable}
 \RequirePackage{float}
@@ -361,14 +379,13 @@
 \RequirePackage{tabto}
 \RequirePackage{hyphenat}
 \RequirePackage{enumitem} % Mise en forme des environements enumerate et itemize
-\RequirePackage{lipsum} % Pour générer du texte d'exemple 
+\RequirePackage{lipsum} % Pour générer du texte d'exemple
 
 
 %% Exec de l'option web pour activer hyperref (Menegon 26-07-2010)
 \ifthenelse{\equal{\WithHyperref}{true}}
 {
 	\RequirePackage[%
-  		pdftex,
   		breaklinks=true,
 		pdfborder={0 0 0},%
 		bookmarks=true,%                  %% Cree les bookmarks ...
@@ -378,7 +395,7 @@
 		pdfhighlight=/O,%                 %% Souligne les liens lors d'un clic (defaut /I : inverse)
 		hypertexnames=false%
 				]{hyperref}
-				
+
 	\hypersetup{bookmarksdepth=subsubsection}
 }
 {
@@ -391,17 +408,17 @@
 
 \ifthenelse{\equal{\WithAlgoTe}{true}}
 {
-	\ifthenelse{\equal{\DocLang}{francais}}
-	{
-		\RequirePackage[french,boxed,algochapter]{algorithm2e}
-	}
-	{
-		\RequirePackage[boxed,algochapter]{algorithm2e}
-	}
-	\SetAlCapSkip{0.5\baselineskip}
-	\SetAlCapFnt{\normalfont}
-	\SetAlTitleFnt{normalfont}
-	\renewcommand{\@algocf@capt@boxed}{above}% Placement de la caption sur le dessus
+  \ifthenelse{\equal{\DocLang}{francais}}
+  {
+    \RequirePackage[french,boxed,algochapter]{algorithm2e}
+  }
+  {
+    \RequirePackage[boxed,algochapter]{algorithm2e}
+  }
+  \SetAlCapSkip{0.5\baselineskip}
+  \SetAlCapFnt{\normalfont}
+  \SetAlTitleFnt{normalfont}
+  \renewcommand{\@algocf@capt@boxed}{above}% Placement de la caption sur le dessus
 }{}
 
 
@@ -415,8 +432,8 @@
 	\newcommand{\bibed}{éd.}
 }
 {
-	\newcommand{\og}{"}
-	\newcommand{\fg}{"}
+	\newcommand{\og}{``}
+	\newcommand{\fg}{``}
 	\newcommand{\bibAnd}{and}
 	\newcommand{\bibed}{ed.}
 }
@@ -433,140 +450,139 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% En Francais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\genTxtDirTh}{Directeur de Thèse}  
-\newcommand{\genTxtDirM}{Directeur de Mémoire}  
+\newcommand{\genTxtDirTh}{Directeur de Thèse}
+\newcommand{\genTxtDirM}{Directeur de Mémoire}
 
-\newcommand{\genTxtDirThF}{Directrice de Thèse}  
-\newcommand{\genTxtDirMF}{Directrice de Mémoire} 
+\newcommand{\genTxtDirThF}{Directrice de Thèse}
+\newcommand{\genTxtDirMF}{Directrice de Mémoire}
 
 
-\newcommand{\genTxtCoDir}{Co-directeur}  
-\newcommand{\genTxtCoDirF}{Co-directrice}  
+\newcommand{\genTxtCoDir}{Co-directeur}
+\newcommand{\genTxtCoDirF}{Co-directrice}
 
-\newcommand{\genTxtPres}{Président du Jury}  
-\newcommand{\genTxtPresF}{Présidente du Jury}  
+\newcommand{\genTxtPres}{Président du Jury}
+\newcommand{\genTxtPresF}{Présidente du Jury}
 
-\newcommand{\genTxtExamExt}{Examinateur Externe}  
-\newcommand{\genTxtExamExtF}{Examinatrice Externe} 
+\newcommand{\genTxtExamExt}{Examinateur Externe}
+\newcommand{\genTxtExamExtF}{Examinatrice Externe}
 
-\newcommand{\genTxtJury}{membre du jury}  
+\newcommand{\genTxtJury}{membre du jury}
 }
 {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% En Anglais
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\genTxtDirTh}{Thesis Supervisor}  
-\newcommand{\genTxtDirM}{Memorandum Supervisor}  
+\newcommand{\genTxtDirTh}{Thesis Supervisor}
+\newcommand{\genTxtDirM}{Memorandum Supervisor}
 
-\newcommand{\genTxtDirThF}{\genTxtDirTh}  
-\newcommand{\genTxtDirMF}{\genTxtDirM} 
+\newcommand{\genTxtDirThF}{\genTxtDirTh}
+\newcommand{\genTxtDirMF}{\genTxtDirM}
 
 
-\newcommand{\genTxtCoDir}{Co-supervisor}  
-\newcommand{\genTxtCoDirF}{\genTxtCoDir}  
+\newcommand{\genTxtCoDir}{Co-supervisor}
+\newcommand{\genTxtCoDirF}{\genTxtCoDir}
 
-\newcommand{\genTxtPres}{President of the Board of Examiners}  
-\newcommand{\genTxtPresF}{\genTxtPresF}  
+\newcommand{\genTxtPres}{President of the Board of Examiners}
+\newcommand{\genTxtPresF}{\genTxtPresF}
 
-\newcommand{\genTxtExamExt}{External Examiner}  
-\newcommand{\genTxtExamExtF}{\genTxtExamExt} 
+\newcommand{\genTxtExamExt}{External Examiner}
+\newcommand{\genTxtExamExtF}{\genTxtExamExt}
 
-\newcommand{\genTxtJury}{Member of the jury}  
+\newcommand{\genTxtJury}{Member of the jury}
 }
 
 %% Directeur de thèse
 \newcommand{\directeur}[3]{
   \newcommand{\PrefDirect}{#1}
   \ifthenelse{\equal{#1}{Mme.}}
-  	{% Permet de modifier pour le féminin
+  {% Permet de modifier pour le féminin
     \ifthenelse{\equal{\TypeDoc}{these}}{\newcommand{\TxtDirect}{\genTxtDirThF}}{}
     \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{\newcommand{\TxtDirect}{\genTxtDirThF}}{}
     \ifthenelse{\equal{\TypeDoc}{memoire}}{\newcommand{\TxtDirect}{\genTxtDirMF}}{}
-    }
-	{
+  }
+  {
     \ifthenelse{\equal{\TypeDoc}{these}}{\newcommand{\TxtDirect}{\genTxtDirTh}}{}
     \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{\newcommand{\TxtDirect}{\genTxtDirTh}}{}
     \ifthenelse{\equal{\TypeDoc}{memoire}}{\newcommand{\TxtDirect}{\genTxtDirM}}{}
-	}
+  }
   \newcommand{\NomDirect}{#2}
   \newcommand{\AffilDirect}{#3}
-  }% 
-  
+}%
+
 %%% Co-directeur de thèse
 \newcommand{\codirecteur}[3]{
   \newcommand{\PrefCoDirect}{#1}
   \ifthenelse{\equal{#1}{Mme.}}
-  	{
+  {
     \newcommand{\TxtCoDirect}{\genTxtCoDirF}
-    }
-    {
+  }
+  {
     \newcommand{\TxtCoDirect}{\genTxtCoDir}
-    }
+  }
   \newcommand{\NomCoDirect}{#2}
   \newcommand{\AffilCoDirect}{#3}
-  }%
-  
+}%
 
- %%% Co-directeur de thèse 2
+
+%%% Co-directeur de thèse 2
 \newcommand{\codirecteurB}[3]{
   \newcommand{\PrefCoDirectB}{#1}
-    \ifthenelse{\equal{#1}{Mme.}}
-  	{
+  \ifthenelse{\equal{#1}{Mme.}}
+  {
     \newcommand{\TxtCoDirectB}{\genTxtCoDirF}
-    }
-    {
+  }
+  {
     \newcommand{\TxtCoDirectB}{\genTxtCoDir}
-    }
-  \newco
+  }
   \newcommand{\NomCoDirectB}{#2}
   \newcommand{\AffilCoDirectB}{#3}
-  }%
-  
+}%
+
 %% Président du jury
 \newcommand{\president}[3]{
   \newcommand{\PrefPresid}{#1}
   \ifthenelse{\equal{#1}{Mme.}}
-  	{
+  {
     \newcommand{\TxtPresid}{\genTxtPresF}
-    }
-    {
+  }
+  {
     \newcommand{\TxtPresid}{\genTxtPres}
-    }
+  }
   \newcommand{\NomPresid}{#2}
   \newcommand{\AffilPresid}{#3}
-  }%
-  
-  
+}%
+
+
 %% Examinateur externe
 \newcommand{\examinexterne}[4]{
   \newcommand{\PrefExamExt}{#1}
   \ifthenelse{\equal{#1}{Mme.}}
-  	{
+  {
     \newcommand{\TxtExamExt}{\genTxtExamExtF}
-    }
-    {
+  }
+  {
     \newcommand{\TxtExamExt}{\genTxtExamExt}
-    }
+  }
   \newcommand{\NomExamExt}{#2}
   \newcommand{\AffilExamExt}{#3}
   \newcommand{\PlusTxtExamExt}{#4}
-  }%
-  
-  %% Examinateur externe
+}%
+
+%% Examinateur externe
 \newcommand{\examinexterneB}[4]{
   \newcommand{\PrefExamExtB}{#1}
   \ifthenelse{\equal{#1}{Mme.}}
-  	{
+  {
     \newcommand{\TxtExamExtB}{\genTxtExamExtF}
-    }
-    {
+  }
+  {
     \newcommand{\TxtExamExtB}{\genTxtExamExt}
-    }
+  }
   \newcommand{\NomExamExtB}{#2}
   \newcommand{\AffilExamExtB}{#3}
   \newcommand{\PlusTxtExamExtB}{#4}
-  }%
-  
+}%
+
 %% Membre du jury
 \newcommand{\jury}[4]{
   \newcommand{\PrefJury}{#1}
@@ -574,8 +590,8 @@
   \newcommand{\NomJury}{#2}
   \newcommand{\AffilJury}{#3}
   \newcommand{\PlusTxtJury}{#4}
-  }%
-  
+}%
+
 %% Membre du jury 2
 \newcommand{\juryB}[4]{
   \newcommand{\PrefJuryB}{#1}
@@ -583,7 +599,7 @@
   \newcommand{\NomJuryB}{#2}
   \newcommand{\AffilJuryB}{#3}
   \newcommand{\PlusTxtJuryB}{#4}
-  }%
+}%
 
 
 
@@ -610,7 +626,7 @@
 %% Marges autour des objets flottants : figures et tableaux
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength\abovecaptionskip{0.5\baselineskip}
-\setlength\belowcaptionskip{0.5\baselineskip} 
+\setlength\belowcaptionskip{0.5\baselineskip}
 \setlength\floatsep{1.5\baselineskip}
 \setlength\textfloatsep{1.5\baselineskip}
 \setlength\intextsep{1.5\baselineskip}
@@ -632,19 +648,19 @@
 \newlength{\tocLeftMarginSecondLineTable}
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\setlength{\tocLeftMarginSecondLineTable}{7em} % Marge gauche quand on va à la ligne pour les tableaux.
-	\setlength{\tocLeftMarginSecondLineAlgo}{8.6em} % Marge gauche quand on va à la ligne pour les algos
+  \setlength{\tocLeftMarginSecondLineTable}{7em} % Marge gauche quand on va à la ligne pour les tableaux.
+  \setlength{\tocLeftMarginSecondLineAlgo}{8.6em} % Marge gauche quand on va à la ligne pour les algos
 }
 {
-	\setlength{\tocLeftMarginSecondLineTable}{6em} % Marge gauche quand on va à la ligne pour les tableaux.
-	\setlength{\tocLeftMarginSecondLineAlgo}{8.1em} % Marge gauche quand on va à la ligne pour les algos
+  \setlength{\tocLeftMarginSecondLineTable}{6em} % Marge gauche quand on va à la ligne pour les tableaux.
+  \setlength{\tocLeftMarginSecondLineAlgo}{8.1em} % Marge gauche quand on va à la ligne pour les algos
 }
 
 \renewcommand{\@pnumwidth}{3em}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Fraction maxi des objets flottants 
+%% Fraction maxi des objets flottants
 %% en haut et bas de page
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\floatpagefraction}{.99}
@@ -662,7 +678,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Espace entre 2 paragraphes
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength{\parskip}{12pt} % 12pt 
+\setlength{\parskip}{12pt} % 12pt
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -685,247 +701,247 @@
 
 \makeatletter
 \renewcommand{\@makefntext}[1]{%
-	\vspace{0.5em}	
- 	\settowidth{\largFoot}{\up{\@thefnmark}\hspace{0.5em} }
-	\parindent -\largFoot
-	\setlength{\leftskip}{2.5em}
-	\setlength{\rightskip}{2.5em}
-	\up{\@thefnmark}\hspace{0.5em} #1
+  \vspace{0.5em}
+  \settowidth{\largFoot}{\up{\@thefnmark}\hspace{0.5em} }
+  \parindent -\largFoot
+  \setlength{\leftskip}{2.5em}
+  \setlength{\rightskip}{2.5em}
+  \up{\@thefnmark}\hspace{0.5em} #1
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Page titre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\lediplome}{
-	\ifthenelse{\equal{\DocLang}{francais}}
-	{
-    	\ifthenelse{\equal{\TypeDoc}{memoire}}
-    	{DE LA\\MAÎTRISE EN GÉNIE\\M.Sc.A.}
-    	{DU\\DOCTORAT EN GÉNIE\\Ph.D.}
-    }
-    {
-    	\ifthenelse{\equal{\TypeDoc}{memoire}}
-    	{THE DEGREE OF\\MASTER OF SCIENCE\\M.Sc.A.}
-    	{THE DEGREE OF DOCTOR OF PHILOSOPHY\\Ph.D.}
-    }
-}  
+  \ifthenelse{\equal{\DocLang}{francais}}
+  {
+    \ifthenelse{\equal{\TypeDoc}{memoire}}
+    {DE LA\\MAÎTRISE EN GÉNIE\\M.Sc.A.}
+    {DU\\DOCTORAT EN GÉNIE\\Ph.D.}
+  }
+  {
+    \ifthenelse{\equal{\TypeDoc}{memoire}}
+    {THE DEGREE OF\\MASTER OF SCIENCE\\M.Sc.A.}
+    {THE DEGREE OF DOCTOR OF PHILOSOPHY\\Ph.D.}
+  }
+}
 
 \newcommand{\diplome}[1]{
   \renewcommand{\lediplome}{#1}
-}  
+}
 
 \renewcommand{\maketitle}{\begin{titlepage}
- \renewcommand{\baselinestretch}{1}\small\normalsize % Interligne simple
+    \renewcommand{\baselinestretch}{1}\small\normalsize % Interligne simple
     \let\footnotesize\small%
     \let\footnoterule\relax%
     \let \footnote \thanks%
-   \begin{center}
+    \begin{center}
       ÉCOLE DE TECHNOLOGIE SUPÉRIEURE\\
       UNIVERSITÉ DU QUÉBEC
       \vfill
       \ifthenelse{\equal{\DocLang}{francais}}
       {
-      \ifthenelse{\equal{\TypeDoc}{these}}{
-        THÈSE PRÉSENTÉE
-      }
-      {\ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-        THÈSE PAR ARTICLES PRÉSENTÉE}{
-        MÉMOIRE PRÉSENTÉ
-      }}~À\\
-      L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
-      \vfill
-      COMME EXIGENCE PARTIELLE\\
-      À L'OBTENTION 
-      \lediplome
-      \vfill
-      PAR\\
+        \ifthenelse{\equal{\TypeDoc}{these}}{
+          THÈSE PRÉSENTÉE
+        }
+        {\ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
+            THÈSE PAR ARTICLES PRÉSENTÉE}{
+            MÉMOIRE PRÉSENTÉ
+          }}~À\\
+        L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+        \vfill
+        COMME EXIGENCE PARTIELLE\\
+        À L'OBTENTION
+        \lediplome
+        \vfill
+        PAR\\
 	\@author
-      \vfill
-      \MakeUppercase{\@title}%
-      \vfill
-      MONTRÉAL, LE \MakeUppercase{\@datedepot}
+        \vfill
+        \MakeUppercase{\@title}%
+        \vfill
+        MONTRÉAL, LE \MakeUppercase{\@datedepot}
       }
       {
-      \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-        MANUSCRIPT-BASED THESIS PRESENTED
-      }{
-        THESIS PRESENTED
-      } TO\\
-      ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
-      \vfill
-      IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR\\
-      \lediplome 
-      \vfill
-      BY\\
+        \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
+          MANUSCRIPT-BASED THESIS PRESENTED
+        }{
+          THESIS PRESENTED
+        } TO\\
+        ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+        \vfill
+        IN PARTIAL FULFILLMENT OF THE REQUIREMENTS FOR\\
+        \lediplome
+        \vfill
+        BY\\
 	\@author
-      \vfill
-      \MakeUppercase{\@title}%
-      \vfill
-      MONTREAL, \MakeUppercase{\@datedepot}%
+        \vfill
+        \MakeUppercase{\@title}%
+        \vfill
+        MONTREAL, \MakeUppercase{\@datedepot}%
       }
-      
+
       \vspace{1em}
-      {\footnotesize 
+      {\footnotesize
 
-      \ifthenelse{\equal{\TypeLic}{reserved}}{ 
-      	\ifthenelse{\equal{\DocLang}{francais}}
-      	{
-        	\copyright~Tous droits réservés, \@authorcopyright, \number\year
-        }
-        {
-        	\copyright~Copyright \number\year \ reserved by \@authorcopyright
-        }
-        	
-      }{
-         \includegraphics[width=50bp]{Figures/logocc} \@authorcopyright, \number\year
-      }}
-   \end{center}
-   \end{titlepage}
-   \clearpage
+        \ifthenelse{\equal{\TypeLic}{reserved}}{
+          \ifthenelse{\equal{\DocLang}{francais}}
+          {
+            \copyright~Tous droits réservés, \@authorcopyright, \number\year
+          }
+          {
+            \copyright~Copyright \number\year \ reserved by \@authorcopyright
+          }
 
-   %Verso 
-  \newpage     
+        }{
+          \includegraphics[width=50bp]{Figures/logocc} \@authorcopyright, \number\year
+        }}
+    \end{center}
+  \end{titlepage}
+  \clearpage
+
+  % Verso
+  \newpage
   ~\\
   \vspace{15cm}
-   
-   \ifthenelse{\equal{\TypeLic}{reserved}}{%
-   \fbox{\parbox{6.125in}{ %% Anciennement 6.4
-    %% Interligne de 1 et taille de 10pt pour le texte
-   \renewcommand{\baselinestretch}{1}\footnotesize\footnotesize
-    \ifthenelse{\equal{\DocLang}{francais}}
-    {
-   	\copyright~Tous droits réservés
-    \newline
-    Cette licence signifie qu'il est interdit de reproduire, d'enregistrer ou de diffuser en tout ou en partie, le présent document.  Le lecteur qui désire imprimer ou conserver sur un autre media une partie importante de ce document, doit obligatoirement en demander l'autorisation à l'auteur. 
-    }
-    {
-   \copyright~Copyright reserved
-    \newline
-   	It is forbidden to reproduce, save or share the content of this document either in whole or in parts. The reader who wishes to print or save this document on any media must first get the permission of the author.
-    }  
-    }}
-   }{%
-   \fbox{\parbox{6.125in}{
-    %% Interligne de 1 et taille de 10pt pour le texte
-   \renewcommand{\baselinestretch}{1}\footnotesize\footnotesize
 
-   \includegraphics[width=50bp]{Figures/logocc}
-   \newline
-   \ifthenelse{\equal{\DocLang}{francais}}
-   {
-   Cette licence Creative Commons signifie qu'il est permis de diffuser, d'imprimer ou de sauvegarder sur un autre support une partie ou la totalité de cette oeuvre à condition de mentionner l'auteur, que ces utilisations soient faites à des fins non commerciales et que le contenu de l'oeuvre n'ait pas été modifié.
-   }
-   {
-    This Creative Commons license allows readers to download this work and share it with others as long as the author is credited. The content of this work cannot be modified in any way or used commercially.
-   }
-   }}
-   }
+  \ifthenelse{\equal{\TypeLic}{reserved}}{%
+    \fbox{\parbox{6.125in}{ %% Anciennement 6.4
+        %% Interligne de 1 et taille de 10pt pour le texte
+        \renewcommand{\baselinestretch}{1}\footnotesize\footnotesize
+        \ifthenelse{\equal{\DocLang}{francais}}
+        {
+          \copyright~Tous droits réservés
+          \newline
+          Cette licence signifie qu'il est interdit de reproduire, d'enregistrer ou de diffuser en tout ou en partie, le présent document.  Le lecteur qui désire imprimer ou conserver sur un autre media une partie importante de ce document, doit obligatoirement en demander l'autorisation à l'auteur.
+        }
+        {
+          \copyright~Copyright reserved
+          \newline
+          It is forbidden to reproduce, save or share the content of this document either in whole or in parts. The reader who wishes to print or save this document on any media must first get the permission of the author.
+        }
+      }}
+  }{%
+    \fbox{\parbox{6.125in}{
+        %% Interligne de 1 et taille de 10pt pour le texte
+        \renewcommand{\baselinestretch}{1}\footnotesize\footnotesize
+
+        \includegraphics[width=50bp]{Figures/logocc}
+        \newline
+        \ifthenelse{\equal{\DocLang}{francais}}
+        {
+          Cette licence Creative Commons signifie qu'il est permis de diffuser, d'imprimer ou de sauvegarder sur un autre support une partie ou la totalité de cette oeuvre à condition de mentionner l'auteur, que ces utilisations soient faites à des fins non commerciales et que le contenu de l'oeuvre n'ait pas été modifié.
+        }
+        {
+          This Creative Commons license allows readers to download this work and share it with others as long as the author is credited. The content of this work cannot be modified in any way or used commercially.
+        }
+      }}
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Page de présentation du jury
-%% LUIS A ELIMINE L'ESPACE ENTRE LES NOMS ET LES AFFILIATIONS (Décanat...) 
+%% LUIS A ELIMINE L'ESPACE ENTRE LES NOMS ET LES AFFILIATIONS (Décanat...)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand\presentjury{\begin{jurypage}%
-  \let\footnotesize\small%
-  \let\footnoterule\relax%
-  \begin{center}%
-    \renewcommand{\baselinestretch}{2}\small\normalsize
-   \ifthenelse{\equal{\DocLang}{francais}}
-   {
-    \textbf{PRÉSENTATION DU JURY}\\
-    \ifthenelse{\equal{\TypeDoc}{memoire}}{
-      CE MÉMOIRE A ÉTÉ ÉVALUÉ
-    }{CETTE THÈSE A ÉTÉ ÉVALUÉE
-    }\\
-    PAR UN JURY COMPOSÉ DE: \\
-    }
-    {
-    \textbf{BOARD OF EXAMINERS}\\
-    \ifthenelse{\equal{\TypeDoc}{these}}{
-      THIS THESIS HAS BEEN EVALUATED
-    }{THIS THESIS HAS BEEN EVALUATED
-    }\\
-    BY THE FOLLOWING BOARD OF EXAMINERS:\\    }
-    \vspace{6em}%
-  \end{center}
-  \begin{flushleft}
-    \renewcommand{\baselinestretch}{1}\small\normalsize
-    % Directeur de mémoire
-    \PrefDirect~\NomDirect,~\TxtDirect\\
-    \AffilDirect\par
-    \vspace{1em}
-    
-    % Codirecteur optionnel
-    \ifdef{\NomCoDirect}{
-      \PrefCoDirect~\NomCoDirect,~\TxtCoDirect\\%
-      \vspace{3pt}
-      \AffilCoDirect\par%
+    \let\footnotesize\small%
+    \let\footnoterule\relax%
+    \begin{center}%
+      \renewcommand{\baselinestretch}{2}\small\normalsize
+      \ifthenelse{\equal{\DocLang}{francais}}
+      {
+        \textbf{PRÉSENTATION DU JURY}\\
+        \ifthenelse{\equal{\TypeDoc}{memoire}}{
+          CE MÉMOIRE A ÉTÉ ÉVALUÉ
+        }{CETTE THÈSE A ÉTÉ ÉVALUÉE
+        }\\
+        PAR UN JURY COMPOSÉ DE: \\
+      }
+      {
+        \textbf{BOARD OF EXAMINERS}\\
+        \ifthenelse{\equal{\TypeDoc}{these}}{
+          THIS THESIS HAS BEEN EVALUATED
+        }{THIS THESIS HAS BEEN EVALUATED
+        }\\
+        BY THE FOLLOWING BOARD OF EXAMINERS:\\    }
+      \vspace{6em}%
+    \end{center}
+    \begin{flushleft}
+      \renewcommand{\baselinestretch}{1}\small\normalsize
+      % Directeur de mémoire
+      \PrefDirect~\NomDirect,~\TxtDirect\\
+      \AffilDirect\par
       \vspace{1em}
-    }{}
-    
-    % Second codirecteur optionnel
-    \ifdef{\NomCoDirectB}{
-      \PrefCoDirectB~\NomCoDirectB,~\TxtCoDirectB\\%
-      \vspace{3pt}
-      \AffilCoDirectB\par%
-      \vspace{1em}
-    }{}
-    
-    % Président du jury
-    \PrefPresid~\NomPresid,~\TxtPresid\\%
-    \AffilPresid\par%
-    \vspace{1em}%
-        
- % Jury
-    \ifdef{\NomJury}{
-	\PrefJury~\NomJury,~\TxtJury\\
-      \AffilJury\par%
-      \vspace{1em}
-    }{}
 
-   
-    % JuryB optionnel
-    \ifdef{\NomJuryB}{
-      \PrefJuryB~\NomJuryB\ifthenelse{\equal{\PlusTxtJuryB}{}}{,~}{,~\PlusTxtJuryB}%
-      \TxtJuryB\\%
-      \AffilJuryB\par%
-      \vspace{1em}
-    }{}
-    
-    
-    % Examinateur externe
-    \ifdef{\NomExamExt}{
-      \PrefExamExt~\NomExamExt,~\TxtExamExt\\
-      \AffilExamExt\par%
-      \vspace{1em}
-    }{}
-      
-  \end{flushleft}
-  \begin{center}%
-    \vspace{3em}%
-    \renewcommand{\baselinestretch}{2}\small\normalsize%
-   \ifthenelse{\equal{\DocLang}{francais}}
-   {
-    \ifthenelse{\equal{\TypeDoc}{memoire}}{IL}{ELLE}~A FAIT L'OBJET D'UNE SOUTENANCE DEVANT JURY ET PUBLIC\\
-    LE \MakeUppercase{\@datesoutenance}\\
-    À L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
-    }
-    {
-    \ifthenelse{\equal{\TypeDoc}{these}}{
-      THIS THESIS
-    }{
-       \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-       THIS THESIS
-       }{
-      THIS THESIS
-    }} WAS PRESENTED AND DEFENDED\\
-      IN THE PRESENCE OF A BOARD OF EXAMINERS AND THE PUBLIC\\
-     ON \MakeUppercase{\@datesoutenance}\\
-    AT ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
-    }
-  \end{center}\par%
-  \vfil\null%
+      % Codirecteur optionnel
+      \ifdef{\NomCoDirect}{
+        \PrefCoDirect~\NomCoDirect,~\TxtCoDirect\\%
+        \vspace{3pt}
+        \AffilCoDirect\par%
+        \vspace{1em}
+      }{}
+
+      % Second codirecteur optionnel
+      \ifdef{\NomCoDirectB}{
+        \PrefCoDirectB~\NomCoDirectB,~\TxtCoDirectB\\%
+        \vspace{3pt}
+        \AffilCoDirectB\par%
+        \vspace{1em}
+      }{}
+
+      % Président du jury
+      \PrefPresid~\NomPresid,~\TxtPresid\\%
+      \AffilPresid\par%
+      \vspace{1em}%
+
+      % Jury
+      \ifdef{\NomJury}{
+        \PrefJury~\NomJury,~\TxtJury\\
+        \AffilJury\par%
+        \vspace{1em}
+      }{}
+
+
+      % JuryB optionnel
+      \ifdef{\NomJuryB}{
+        \PrefJuryB~\NomJuryB\ifthenelse{\equal{\PlusTxtJuryB}{}}{,~}{,~\PlusTxtJuryB}%
+        \TxtJuryB\\%
+        \AffilJuryB\par%
+        \vspace{1em}
+      }{}
+
+
+      % Examinateur externe
+      \ifdef{\NomExamExt}{
+        \PrefExamExt~\NomExamExt,~\TxtExamExt\\
+        \AffilExamExt\par%
+        \vspace{1em}
+      }{}
+
+    \end{flushleft}
+    \begin{center}%
+      \vspace{3em}%
+      \renewcommand{\baselinestretch}{2}\small\normalsize%
+      \ifthenelse{\equal{\DocLang}{francais}}
+      {
+        \ifthenelse{\equal{\TypeDoc}{memoire}}{IL}{ELLE}~A FAIT L'OBJET D'UNE SOUTENANCE DEVANT JURY ET PUBLIC\\
+        LE \MakeUppercase{\@datesoutenance}\\
+        À L'ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+      }
+      {
+        \ifthenelse{\equal{\TypeDoc}{these}}{
+          THIS THESIS
+        }{
+          \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
+            THIS THESIS
+          }{
+            THIS THESIS
+          }} WAS PRESENTED AND DEFENDED\\
+        IN THE PRESENCE OF A BOARD OF EXAMINERS AND THE PUBLIC\\
+        ON \MakeUppercase{\@datesoutenance}\\
+        AT ÉCOLE DE TECHNOLOGIE SUPÉRIEURE
+      }
+    \end{center}\par%
+    \vfil\null%
   \end{jurypage}
 }
 
@@ -937,82 +953,82 @@
 \setcounter{secnumdepth}{5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Changement dans la table des matières 
+%% Changement dans la table des matières
 %% des entrées associées aux chapitres
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \def\@chapter[#1]#2{
-     \ifnum \c@secnumdepth >\m@ne%
-       \if@mainmatter%
-         \refstepcounter{chapter}%
-         \typeout{\@chapapp\space\thechapter}%
-            \addcontentsline{toc}{chapter}
-            {%
-            	\protect
-            	{%
-            		\texorpdfstring
-            		{%
-            			\numberline
-            			{%
-            			\protect\uppercase
-            				{%
-            				\@chapapp\ \thechapter%
-            				}%
-            			}%
-            			\protect\uppercase\expandafter
-            			{%
-            				#1
-            			}%
-            		}%
-            		{%
-            			\@chapapp\ \thechapter\ #1%
-            		}%
-            	}%
-            }%
-       \else%
-         \addcontentsline{toc}{chapter}{#1}%
-       \fi%
-     \else%
-       \addcontentsline{toc}{chapter}{#1}%
-     \fi%
+  \ifnum \c@secnumdepth >\m@ne%
+  \if@mainmatter%
+  \refstepcounter{chapter}%
+  \typeout{\@chapapp\space\thechapter}%
+  \addcontentsline{toc}{chapter}
+  {%
+    \protect
+    {%
+      \texorpdfstring
+      {%
+        \numberline
+        {%
+          \protect\uppercase
+          {%
+            \@chapapp\ \thechapter%
+          }%
+        }%
+        \protect\uppercase\expandafter
+        {%
+          #1
+        }%
+      }%
+      {%
+        \@chapapp\ \thechapter\ #1%
+      }%
+    }%
+  }%
+  \else%
+  \addcontentsline{toc}{chapter}{#1}%
+  \fi%
+  \else%
+  \addcontentsline{toc}{chapter}{#1}%
+  \fi%
   \chaptermark{#1}%
   \@makechapterhead{#2}%
   \@afterheading%
-  }%
+}%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Modification des chapitres numérotés
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makechapterhead}[1]{{
-	\thispagestyle{empty}
-        \begin{center}
-        \singlespacing\normalfont\normalsize\bfseries
-        \etchapterheadstyle{\@chapapp{ \thechapter}} % CHAPTER 1
-        ~\\~\\
-        \etchapterheadstyle{#1} % TITLE OF CHAPTER
-        ~\\~\\
-        \end{center}
-        \vspace{-\parskip}  	    
-        \vspace*{-\topskip}
-		\vspace{-\parskip}  	    
+    \thispagestyle{empty}
+    \begin{center}
+      \singlespacing\normalfont\normalsize\bfseries
+      \etchapterheadstyle{\@chapapp{ \thechapter}} % CHAPTER 1
+      ~\\~\\
+      \etchapterheadstyle{#1} % TITLE OF CHAPTER
+      ~\\~\\
+    \end{center}
+    \vspace{-\parskip}
+    \vspace*{-\topskip}
+    \vspace{-\parskip}
 
-}}
+  }}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Modification des chapitres sans numéro
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand{\@makeschapterhead}[1]{{
-	\thispagestyle{empty}
-        \begin{center}
-         \singlespacing\normalfont\normalsize\bfseries
-        \etchapterheadstyle{#1} % TITLE OF CHAPTER
-        ~\\~\\
-        \end{center}
-        \vspace{-\parskip}  	    
-        \vspace*{-\topskip}
-		\vspace{-\parskip}  	
-}}
+    \thispagestyle{empty}
+    \begin{center}
+      \singlespacing\normalfont\normalsize\bfseries
+      \etchapterheadstyle{#1} % TITLE OF CHAPTER
+      ~\\~\\
+    \end{center}
+    \vspace{-\parskip}
+    \vspace*{-\topskip}
+    \vspace{-\parskip}
+  }}
 
 \newcommand{\etchapterheadstyle}[1]{\MakeUppercase{#1}}
 
@@ -1022,57 +1038,57 @@
 %% divisions de chapitre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\section{\@startsection{section}{1}{\z@}%
-                                   {-0.25ex \@plus -1ex \@minus -.2ex}%
-                                   {0.5ex \@plus.2ex}%
-                                   {\singlespacing\normalfont\normalsize\bfseries}}
+  {-0.25ex \@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus.2ex}%
+  {\singlespacing\normalfont\normalsize\bfseries}}
 \renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
-                                     {-0.25ex\@plus -1ex \@minus -.2ex}%
-                                     {0.5ex \@plus .2ex}%
-                                     {\singlespacing\normalfont\normalsize\bfseries}}
+  {-0.25ex\@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\singlespacing\normalfont\normalsize\bfseries}}
 \renewcommand\subsubsection{\@startsection{subsubsection}{3}{\z@}%
-                                     {-0.25ex\@plus -1ex \@minus -.2ex}%
-                                     {0.5ex \@plus .2ex}%
-                                     {\singlespacing\normalfont\normalsize\bfseries}}
+  {-0.25ex\@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\singlespacing\normalfont\normalsize\bfseries}}
 \renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
-                                    {-0.25ex \@plus -1ex \@minus -.2ex}%
-                                    {0.5ex \@plus .2ex}%
-                                    {\singlespacing\normalfont\normalsize\bfseries}}
+  {-0.25ex \@plus -1ex \@minus -.2ex}%
+  {0.5ex \@plus .2ex}%
+  {\singlespacing\normalfont\normalsize\bfseries}}
 \renewcommand\subparagraph{\@startsection{subparagraph}{5}{\parindent}%
-                                       {0.25ex \@plus1ex \@minus .2ex}%
-                                       {-1em}%
-                                      {\singlespacing\normalfont\normalsize\bfseries}}
+  {0.25ex \@plus1ex \@minus .2ex}%
+  {-1em}%
+  {\singlespacing\normalfont\normalsize\bfseries}}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Rédéfinition de l'environnement de la page de titre 
+%% Rédéfinition de l'environnement de la page de titre
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewenvironment{titlepage}{%
   \if@twocolumn
-     \@restonecoltrue\onecolumn%
+  \@restonecoltrue\onecolumn%
   \else
-     \@restonecolfalse\newpage
+  \@restonecolfalse\newpage
   \fi
   \thispagestyle{empty}%
   \setcounter{page}{1}
-  }%
+}%
 {\if@restonecol\twocolumn \else \newpage \fi%
   \if@twoside\else%
   \setcounter{page}\@ne%
   \fi
   \thispagestyle{empty}%
-  }
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Définition de l'environnement de la présentation du jury
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{jurypage}{%
   \if@twocolumn
-     \@restonecoltrue\onecolumn%
+  \@restonecoltrue\onecolumn%
   \else
-     \@restonecolfalse\newpage
+  \@restonecolfalse\newpage
   \fi
   \thispagestyle{empty}%
-  }%
+}%
 {\if@restonecol\twocolumn \else \newpage \fi%
   \if@twoside\else%
   \setcounter{page}\@ne%
@@ -1084,13 +1100,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Abstract
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \newenvironment{abstractTemplate}[4]{%
+
   \newcommand\KeyWordsName{#4}
   \newcommand\KeyWords{#3}
   \if@twocolumn
-     \@restonecoltrue\onecolumn%
+  \@restonecoltrue\onecolumn%
   \else
-     \@restonecolfalse\newpage
+  \@restonecolfalse\newpage
   \fi
   \cleardoublepage
   \thispagestyle{empty}% Pas de numérotation sur cette page
@@ -1123,13 +1141,13 @@
 
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\newenvironment{sommaire}[1]{\abstractTemplate{\@title}{RÉSUMÉ}{#1}{\bf Mots clés:}}{\endabstractTemplate}
-	\newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRACT}{#2}{\bf Keywords:}}{\endabstractTemplate}
+  \newenvironment{sommaire}[1]{\abstractTemplate{\@title}{RÉSUMÉ}{#1}{\bf Mots clés:}}{\endabstractTemplate}
+  \newenvironment{abstract}[2]{\abstractTemplate{#1}{ABSTRACT}{#2}{\bf Keywords:}}{\endabstractTemplate}
 
 }
 {
-	\newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
-	\newenvironment{summary}[2]{\abstractTemplate{#1}{RÉSUMÉ}{#2}{\bf Mots clés:}}{\endabstractTemplate}
+  \newenvironment{abstract}[1]{\abstractTemplate{\@title}{ABSTRACT}{#1}{\bf Keywords:}}{\endabstractTemplate}
+  \newenvironment{summary}[2]{\abstractTemplate{#1}{RÉSUMÉ}{#2}{\bf Mots clés:}}{\endabstractTemplate}
 }
 
 
@@ -1138,16 +1156,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\newenvironment{avantpropos}{%
-  	\chapter*{Avant-propos}
-	}
+  \newenvironment{avantpropos}{%
+    \chapter*{Avant-propos}
+  }
 }
 {
-	\newenvironment{foreword}{%
-  	\chapter*{Foreword}
-	}
+  \newenvironment{foreword}{%
+    \chapter*{Foreword}
+  }
 }
-	
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Introduction
@@ -1157,61 +1175,61 @@
   \chapter*{Introduction}
   \addcontentsline{toc}{chapter}{INTRODUCTION} % Ajout dans la table des matières
   \setcounter{page}{1}
-  
-   \newcommand{\numero}{\thesection}
- 
+
+  \newcommand{\numero}{\thesection}
+
   \newcommand{\changenumero}[1]{\renewcommand{\numero}{##1}}
-  
+
   \def\sectionintro{\@ifstar\unnumberedsection\numberedsection}
 
   \def\numberedsection{\@ifnextchar[%]
     \numberedsectionwithtwoarguments\numberedsectionwithoneargument}
-    
+
   \def\unnumberedsection{\@ifnextchar[%]
     \unnumberedsectionwithtwoarguments\unnumberedsectionwithoneargument}
-    
+
   \def\numberedsectionwithoneargument##1{\numberedsectionwithtwoarguments[##1]{##1}}
-  
+
   \def\unnumberedsectionwithoneargument##1{\unnumberedsectionwithtwoarguments[##1]{##1}}
-  
+
   \def\numberedsectionwithtwoarguments[##1]##2{%
     \ifhmode\par\fi
     \removelastskip
     \vskip .7ex \goodbreak
     \noindent
     \begingroup
-      \leavevmode\Large\bfseries\raggedright
-      \normalsize\bfseries
-      \numero\quad
-      ##2
-      \par
+    \leavevmode\Large\bfseries\raggedright
+    \normalsize\bfseries
+    \numero\quad
+    ##2
+    \par
     \endgroup
     \vskip .7ex \nobreak
   }
-  
+
   \def\unnumberedsectionwithtwoarguments[##1]##2{%
     \ifhmode\par\fi
     \removelastskip
     \vskip .7ex\goodbreak
     \noindent
     \begingroup
-      \leavevmode\normalfont\Large\bfseries\raggedright
-      \leavevmode\normalfont\Large\bfseries\raggedright
-      \normalsize\bfseries
-      ##2
-      \par
+    \leavevmode\normalfont\Large\bfseries\raggedright
+    \leavevmode\normalfont\Large\bfseries\raggedright
+    \normalsize\bfseries
+    ##2
+    \par
     \endgroup
     \vskip .7ex\nobreak
   }
-  
-  
+
+
   \def\section{\refstepcounter{section}\changenumero{\thesection.} \sectionintro}
   \def\subsection{\refstepcounter{subsection}\changenumero{\thesubsection} \sectionintro}
   \def\subsubsection{\refstepcounter{subsubsection}\changenumero{\thesubsubsection} \sectionintro}
   \def\paragraph{\refstepcounter{paragraph}\changenumero{\theparagraph} \sectionintro}
   \def\subparagraph{\refstepcounter{subparagraph}\changenumero{\thesubparagraph} \sectionintro}
 
- }
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Revue de littérature
@@ -1219,20 +1237,20 @@
 
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\newenvironment{revuedelitterature}{%
-  		\cleardoublepage
-  		\chapter*{Revue de littérature}
-  		\addcontentsline{toc}{chapter}{REVUE DE LITTÉRATURE} % Ajout dans la table des matières
-  		\stepcounter{chapter}
-  	}
+  \newenvironment{revuedelitterature}{%
+    \cleardoublepage
+    \chapter*{Revue de littérature}
+    \addcontentsline{toc}{chapter}{REVUE DE LITTÉRATURE} % Ajout dans la table des matières
+    \stepcounter{chapter}
+  }
 }
 {
-	\newenvironment{literaturereview}{%
-  		\cleardoublepage
-  		\chapter*{Literature review}
-  		\addcontentsline{toc}{chapter}{LITERATURE REVIEW} % Ajout dans la table des matières
-  		\stepcounter{chapter}
-  	}
+  \newenvironment{literaturereview}{%
+    \cleardoublepage
+    \chapter*{Literature review}
+    \addcontentsline{toc}{chapter}{LITERATURE REVIEW} % Ajout dans la table des matières
+    \stepcounter{chapter}
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1240,20 +1258,20 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newenvironment{conclusion}{%
 
-\ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
-  \ifthenelse{\equal{\DocLang}{francais}}
-	{
-  	\chapter*{Conclusion générale}
-  	\addcontentsline{toc}{chapter}{CONCLUSION GÉNÉRALE} 
-  	}
-  	{
-  	\chapter*{General Conclusion}
-  	\addcontentsline{toc}{chapter}{GENERAL CONCLUSION} 
-  	}
-}{
-  \chapter*{Conclusion}
-  \addcontentsline{toc}{chapter}{CONCLUSION} 
-}
+  \ifthenelse{\equal{\TypeDoc}{thesepararticles}}{
+    \ifthenelse{\equal{\DocLang}{francais}}
+    {
+      \chapter*{Conclusion générale}
+      \addcontentsline{toc}{chapter}{CONCLUSION GÉNÉRALE}
+    }
+    {
+      \chapter*{General Conclusion}
+      \addcontentsline{toc}{chapter}{GENERAL CONCLUSION}
+    }
+  }{
+    \chapter*{Conclusion}
+    \addcontentsline{toc}{chapter}{CONCLUSION}
+  }
 }
 
 
@@ -1263,18 +1281,18 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-	\newenvironment{remerciements}{%
-  	\chapter*{Remerciements}
-	}
+  \newenvironment{remerciements}{%
+    \chapter*{Remerciements}
+  }
 }
 {
-	\newenvironment{acknowledgements}{%
-  	\chapter*{Acknowledgements}
-	}
+  \newenvironment{acknowledgements}{%
+    \chapter*{Acknowledgements}
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Commande pour écrire ``Page'' 
+%% Commande pour écrire ``Page''
 %% dans les différentes tables
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\tdmpage}[0]{\hspace{\fill}\mbox{Page}\vskip 0em\par}
@@ -1286,10 +1304,10 @@
 
 \ifthenelse{\equal{\DocLang}{english}}
 {
-\addto\captionsenglish{
-  \renewcommand{\contentsname}%
+  \addto\captionsenglish{
+    \renewcommand{\contentsname}%
     {Table of Contents}%
-}
+  }
 }
 {}
 
@@ -1298,98 +1316,98 @@
 \renewcommand\tableofcontents{%
   \chapter*{\contentsname}
   \tdmpage
-    {
-      % Espace avant les différentes lignes de la table des matières
-      \setlength{\parskip}{0pt}%
-      % Interligne simple pour la table des matières
-      \renewcommand{\baselinestretch}{1}\small\normalsize%
-      \@starttoc{toc}
-    }
+  {
+    % Espace avant les différentes lignes de la table des matières
+    \setlength{\parskip}{0pt}%
+    % Interligne simple pour la table des matières
+    \renewcommand{\baselinestretch}{1}\small\normalsize%
+    \@starttoc{toc}
+  }
 }
 \renewcommand*\l@chapter[2]{%
   \ifnum \c@tocdepth >\m@ne%
-     \settowidth{\largNum}{\hss #2}
-    \addpenalty{-\@highpenalty}%
-     \tolerance=9999
-    \vskip 1em \@plus\p@%
-    \setlength\@tempdima{6.8em}%
-    \begingroup
-      \parindent \z@ \rightskip \tocRightMargin%
-       \parfillskip -\tocRightMargin%
-      \leavevmode %
-      \advance\leftskip\@tempdima%
-      \hskip -\leftskip%
-      \nohyphens{#1} %\nobreak
-      \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
-      \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \settowidth{\largNum}{\hss #2}
+  \addpenalty{-\@highpenalty}%
+  \tolerance=9999
+  \vskip 1em \@plus\p@%
+  \setlength\@tempdima{6.8em}%
+  \begingroup
+  \parindent \z@ \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode %
+  \advance\leftskip\@tempdima%
+  \hskip -\leftskip%
+  \nohyphens{#1} %\nobreak
+  \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
+  \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi
-  }
-  
- \renewcommand*\l@section[2]{%
+}
+
+\renewcommand*\l@section[2]{%
   \ifnum \c@tocdepth >\m@ne%
-     \settowidth{\largNum}{\hss #2}
-    \addpenalty{-\@highpenalty}%
-     \tolerance=9999
-    \setlength\@tempdima{3.1em}%
-    \begingroup
-      \parindent \z@ \rightskip \tocRightMargin%
-       \parfillskip -\tocRightMargin%
-      \leavevmode %
-      \advance\leftskip\@tempdima%
-      \hskip -\leftskip%
-      \nohyphens{#1} %\nobreak
-      \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
-       \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \settowidth{\largNum}{\hss #2}
+  \addpenalty{-\@highpenalty}%
+  \tolerance=9999
+  \setlength\@tempdima{3.1em}%
+  \begingroup
+  \parindent \z@ \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode %
+  \advance\leftskip\@tempdima%
+  \hskip -\leftskip%
+  \nohyphens{#1} %\nobreak
+  \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
+  \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi
-  }
-  
- \renewcommand*\l@subsection[2]{%
+}
+
+\renewcommand*\l@subsection[2]{%
   \ifnum \c@tocdepth >\m@ne%
-     \settowidth{\largNum}{\hss #2}
-    \addpenalty{-\@highpenalty}%
-     \tolerance=9999
-    \setlength\@tempdima{3.7em}%
-    \begingroup
-       \parindent 3.1em \rightskip \tocRightMargin%
-       \parfillskip -\tocRightMargin%
-      \leavevmode %
-      \advance\leftskip 6.8em%\@tempdima%
-      \hskip -\leftskip%
-      \nohyphens{#1} %\nobreak
-      \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
-      \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \settowidth{\largNum}{\hss #2}
+  \addpenalty{-\@highpenalty}%
+  \tolerance=9999
+  \setlength\@tempdima{3.7em}%
+  \begingroup
+  \parindent 3.1em \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode %
+  \advance\leftskip 6.8em%\@tempdima%
+  \hskip -\leftskip%
+  \nohyphens{#1} %\nobreak
+  \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
+  \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi
-  }
-   
- \renewcommand*\l@subsubsection[2]{%
+}
+
+\renewcommand*\l@subsubsection[2]{%
   \ifnum \c@tocdepth >\m@ne%
-   \settowidth{\largNum}{\hss #2}
-    \addpenalty{-\@highpenalty}%
-     \tolerance=9999
-    \setlength\@tempdima{4.3em}%
-    \begingroup
-       \parindent 6.8em \rightskip \tocRightMargin%
-       \parfillskip -\tocRightMargin%
-      \leavevmode %
-      \advance\leftskip 11.1em%\@tempdima%
-      \hskip -\leftskip%
-      \nohyphens{#1} %\nobreak
-      \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
-      \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \settowidth{\largNum}{\hss #2}
+  \addpenalty{-\@highpenalty}%
+  \tolerance=9999
+  \setlength\@tempdima{4.3em}%
+  \begingroup
+  \parindent 6.8em \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode %
+  \advance\leftskip 11.1em%\@tempdima%
+  \hskip -\leftskip%
+  \nohyphens{#1} %\nobreak
+  \leaders\hbox{$\m@th\mkern \@dotsep mu\hbox{.}\mkern \@dotsep mu$}
+  \hfil \nobreak\hb@xt@\largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi
-  } 
-  
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Profondeur des entrées dans la table 
+%% Profondeur des entrées dans la table
 %% des matières: 3=\subsubsection
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setcounter{tocdepth}{3}
@@ -1397,88 +1415,88 @@
 
 \ifthenelse{\equal{\WithAlgoTe}{true}}{
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% Liste des algorithmes
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand\listofalgorithms{%
-   \chapter*{\listalgorithmename}
-   %\vskip 1\baselineskip
-  \tdmpage
-  {
-    \setlength{\parskip}{0pt}%
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  %% Liste des algorithmes
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \renewcommand\listofalgorithms{%
+    \chapter*{\listalgorithmename}
+    % \vskip 1\baselineskip
+    \tdmpage
+    {
+      \setlength{\parskip}{0pt}%
       % Interligne simple pour la table des matières
       \renewcommand{\baselinestretch}{1}\small\normalsize%
-    \@starttoc{loa}%
+      \@starttoc{loa}%
     }
-}
+  }
 
 
-\renewcommand \thealgocf
-     {\arabic{chapter}.\@arabic\c@algocf}
-\renewcommand*\l@algocf[2]{%
-  \settowidth{\largNum}{\hss #2}
-  \ifnum \c@tocdepth >\m@ne%
+  \renewcommand \thealgocf
+  {\arabic{chapter}.\@arabic\c@algocf}
+  \renewcommand*\l@algocf[2]{%
+    \settowidth{\largNum}{\hss #2}
+    \ifnum \c@tocdepth >\m@ne%
     \addpenalty{-\@highpenalty}%
     \vskip 1.0em \@plus\p@%
     \setlength\@tempdima{3.4em}%
-        \noindent%
+    \noindent%
     \begingroup
-      \pretolerance=10000
-      \parindent \z@ \rightskip \tocRightMargin%
-      \parfillskip -\tocRightMargin%
-     \leavevmode \normalsize%
-     \advance\leftskip \tocLeftMarginSecondLineAlgo%
-      \hskip -\leftskip%
-      {\algorithmname\mbox{\hspace{4pt}}#1}%\nobreak%
-       \leaders\hbox{$\m@th%
-        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
-        mu$} \hfil\nobreak\hb@xt@%
-                    \largNum{\hss #2}\par%
-      \penalty\@highpenalty%
+    \pretolerance=10000
+    \parindent \z@ \rightskip \tocRightMargin%
+    \parfillskip -\tocRightMargin%
+    \leavevmode \normalsize%
+    \advance\leftskip \tocLeftMarginSecondLineAlgo%
+    \hskip -\leftskip%
+    {\algorithmname\mbox{\hspace{4pt}}#1}%\nobreak%
+    \leaders\hbox{$\m@th%
+      \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
+      mu$} \hfil\nobreak\hb@xt@%
+    \largNum{\hss #2}\par%
+    \penalty\@highpenalty%
     \endgroup
-  \fi}
+    \fi}
 }{}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Liste des figures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\listoffigures{%
-    \chapter*{\listfigurename}
-    \tdmpage
-    {
-      \setlength{\parskip}{0pt}%
-      % Interligne simple pour la table des matières
-      \renewcommand{\baselinestretch}{1}\small\normalsize%
-      \@starttoc{lof}%
-    }
+  \chapter*{\listfigurename}
+  \tdmpage
+  {
+    \setlength{\parskip}{0pt}%
+    % Interligne simple pour la table des matières
+    \renewcommand{\baselinestretch}{1}\small\normalsize%
+    \@starttoc{lof}%
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Numérotation des figures
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand \thefigure
-     {\arabic{chapter}.\@arabic\c@figure}
+{\arabic{chapter}.\@arabic\c@figure}
 \renewcommand*\l@figure[2]{%
   \settowidth{\largNum}{\hss #2}
   \ifnum \c@tocdepth >\m@ne%
-    \addpenalty{-\@highpenalty}%
-    \vskip 1.0em \@plus\p@%
-    \setlength\@tempdima{3.4em}%
-        \noindent%
-    \begingroup
-      \pretolerance=10000
-      \parindent \z@ \rightskip \tocRightMargin%
-      \parfillskip -\tocRightMargin%
-     \leavevmode \normalsize%
-     \advance\leftskip \tocLeftMarginSecondLineFigure%
-      \hskip -\leftskip%
-      {\figurename\mbox{\hspace{4pt}}#1}%\nobreak%
-       \leaders\hbox{$\m@th%
-        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
-        mu$} \hfil\nobreak\hb@xt@%
-                    \largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \addpenalty{-\@highpenalty}%
+  \vskip 1.0em \@plus\p@%
+  \setlength\@tempdima{3.4em}%
+  \noindent%
+  \begingroup
+  \pretolerance=10000
+  \parindent \z@ \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode \normalsize%
+  \advance\leftskip \tocLeftMarginSecondLineFigure%
+  \hskip -\leftskip%
+  {\figurename\mbox{\hspace{4pt}}#1}%\nobreak%
+  \leaders\hbox{$\m@th%
+    \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
+    mu$} \hfil\nobreak\hb@xt@%
+  \largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1489,10 +1507,10 @@
   \tdmpage
   {
     \setlength{\parskip}{0pt}%
-      % Interligne simple pour la table des matières
-      \renewcommand{\baselinestretch}{1}\small\normalsize%
+    % Interligne simple pour la table des matières
+    \renewcommand{\baselinestretch}{1}\small\normalsize%
     \@starttoc{lot}%
-    }
+  }
 }
 
 
@@ -1501,41 +1519,41 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \renewcommand \thetable
-     {\arabic{chapter}.\@arabic\c@table}
+{\arabic{chapter}.\@arabic\c@table}
 \renewcommand*\l@table[2]{%
   \settowidth{\largNum}{\hss #2}
   \ifnum \c@tocdepth >\m@ne%
-    \addpenalty{-\@highpenalty}%
-    \vskip 1.0em \@plus\p@%
-    \setlength\@tempdima{3.4em}%ici pour changer l'espace entre le numero et le titre du tableau !! (défaut 2.2em)
-        \noindent%
-    \begingroup
-      \pretolerance=10000
-      \parindent \z@ \rightskip \tocRightMargin%
-      \parfillskip -\tocRightMargin%
-      \leavevmode \normalsize%
-     \advance\leftskip \tocLeftMarginSecondLineTable %5.2em%8.4em%
-      \hskip -\leftskip%
-      {\tablename\mbox{\hspace{4pt}}#1}%\nobreak%
-       \leaders\hbox{$\m@th%
-        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
-        mu$} \hfil\nobreak\hb@xt@%
-                    \largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \addpenalty{-\@highpenalty}%
+  \vskip 1.0em \@plus\p@%
+  \setlength\@tempdima{3.4em}%ici pour changer l'espace entre le numero et le titre du tableau !! (défaut 2.2em)
+  \noindent%
+  \begingroup
+  \pretolerance=10000
+  \parindent \z@ \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode \normalsize%
+  \advance\leftskip \tocLeftMarginSecondLineTable %5.2em%8.4em%
+  \hskip -\leftskip%
+  {\tablename\mbox{\hspace{4pt}}#1}%\nobreak%
+  \leaders\hbox{$\m@th%
+    \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
+    mu$} \hfil\nobreak\hb@xt@%
+  \largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Liste des extraits de code
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \renewcommand\lstlistoflistings{%
-    \chapter*{\lstlistlistingname}%
-    \tdmpage
-    {
-      \setlength{\parskip}{0pt}%
-      \renewcommand{\baselinestretch}{1}\small\normalsize%
-      \@starttoc{lol}%
-    }
+  \chapter*{\lstlistlistingname}%
+  \tdmpage
+  {
+    \setlength{\parskip}{0pt}%
+    \renewcommand{\baselinestretch}{1}\small\normalsize%
+    \@starttoc{lol}%
+  }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1544,24 +1562,24 @@
 \renewcommand*\l@lstlisting[2]{%
   \settowidth{\largNum}{\hss #2}
   \ifnum \c@tocdepth >\m@ne%
-    \addpenalty{-\@highpenalty}%
-    \vskip 1.0em \@plus\p@%
-    \setlength\@tempdima{3.4em}%
-        \noindent%
-    \begingroup
-      \pretolerance=10000
-      \parindent \z@ \rightskip \tocRightMargin%
-      \parfillskip -\tocRightMargin%
-     \leavevmode \normalsize%
-     \advance\leftskip \tocLeftMarginSecondLineFigure%
-      \hskip -\leftskip%
-      {\lstlistingname\mbox{\hspace{4pt}}#1}%\nobreak%
-       \leaders\hbox{$\m@th%
-        \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
-        mu$} \hfil\nobreak\hb@xt@%
-                    \largNum{\hss #2}\par%
-      \penalty\@highpenalty%
-    \endgroup
+  \addpenalty{-\@highpenalty}%
+  \vskip 1.0em \@plus\p@%
+  \setlength\@tempdima{3.4em}%
+  \noindent%
+  \begingroup
+  \pretolerance=10000
+  \parindent \z@ \rightskip \tocRightMargin%
+  \parfillskip -\tocRightMargin%
+  \leavevmode \normalsize%
+  \advance\leftskip \tocLeftMarginSecondLineFigure%
+  \hskip -\leftskip%
+  {\lstlistingname\mbox{\hspace{4pt}}#1}%\nobreak%
+  \leaders\hbox{$\m@th%
+    \mkern \@dotsep mu\hbox{.}\mkern \@dotsep%
+    mu$} \hfil\nobreak\hb@xt@%
+  \largNum{\hss #2}\par%
+  \penalty\@highpenalty%
+  \endgroup
   \fi}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1574,37 +1592,37 @@
 \newcommand*\losymblabel[1]{\mbox{#1}\hfill}
 
 \newenvironment{listofabbr}[1][\descril]{%
- \cleardoublepage
- \ifthenelse{\equal{\DocLang}{francais}}
- {	
-  	\chapter*{Liste des abréviations, sigles et acronymes}
- }
- {
-  	\chapter*{List of abreviations}
- }
+  \cleardoublepage
+  \ifthenelse{\equal{\DocLang}{francais}}
+  {
+    \chapter*{Liste des abréviations, sigles et acronymes}
+  }
+  {
+    \chapter*{List of abreviations}
+  }
   \begin{list}{\mbox{}}{%
-	  \renewcommand\makelabel\losymblabel%
+      \renewcommand\makelabel\losymblabel%
       \leftmargin #1%
       \labelwidth \leftmargin%
       \labelsep    1mm
-      }}%
+    }}%
   {\end{list}}
 
 \newenvironment{listofsymbols}[1][\descril]{%
   \cleardoublepage
- \ifthenelse{\equal{\DocLang}{francais}}
+  \ifthenelse{\equal{\DocLang}{francais}}
   {
-  \chapter*{Liste des symboles et unités de mesure}
+    \chapter*{Liste des symboles et unités de mesure}
   }
   {
-  	\chapter*{Liste of symbols and units of measurements}
+    \chapter*{Liste of symbols and units of measurements}
   }
   \begin{list}{\mbox{}}{%
-	  \renewcommand\makelabel\losymblabel%
+      \renewcommand\makelabel\losymblabel%
       \leftmargin #1%
       \labelwidth \leftmargin%
       \labelsep    1mm
-      }}%
+    }}%
   {\end{list}}
 
 
@@ -1630,7 +1648,7 @@
 
 %% Les subfigures sont de la forme a), mais a en citées.
 \DeclareCaptionLabelFormat{singleparens}{#2)}
-\captionsetup[subfigure]{labelformat=singleparens} 
+\captionsetup[subfigure]{labelformat=singleparens}
 
 
 
@@ -1647,8 +1665,8 @@
   \@float{figureap}%
   \centering
 }{%
-  \end@float
-  \vspace{-0.5\baselineskip} % supprime decalage vers bas ajout au dessus
+\end@float
+\vspace{-0.5\baselineskip} % supprime decalage vers bas ajout au dessus
 }
 \renewcommand{\thefigureap}{{\thechapter-\arabic{figureap}}}
 
@@ -1656,17 +1674,17 @@
 
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-\DeclareCaptionType{tableap}[Tableau-A]
+  \DeclareCaptionType{tableap}[Tableau-A]
 }
 {
-\DeclareCaptionType{tableap}[Table-A]
+  \DeclareCaptionType{tableap}[Table-A]
 }
 \captionsetup[tableap]{labelfont=normalfont,labelsep=quad,justification=centering,skip=1.5\baselineskip}
 \renewenvironment{tableap}[1][]{%
   \@float{tableap}%
   \centering
 }{%
-  \end@float
+\end@float
 }
 \renewcommand{\thetableap}{{\thechapter-\arabic{tableap}}}
 
@@ -1674,10 +1692,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Mise en forme des listes enumerate et itemize
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\ifthenelse{\equal{\DocLang}{francais}}
-{
-	\ifdef{\ifFBStandardItemizeEnv}{\frenchbsetup{StandardItemizeEnv=true,StandardEnumerateEnv=true}}{}
+\ifthenelse{\equal{\DocLang}{francais}}{	    \ifdef{\ifFBStandardItemizeEnv}{\frenchbsetup{StandardItemizeEnv=true,StandardEnumerateEnv=true}}{}
 }{}
 % Pour enumerate, pas de décallage des puces, numérotation en lettres minuscules
 \setlist[enumerate]{leftmargin=*,label=\alph*. , labelsep=1em}
@@ -1694,12 +1709,12 @@
   \setcounter{chapter}{0}%
 
   \gdef\@chapapp{\appendixname}%
-   \renewcommand\thechapter{\Roman{chapter}}
+  \renewcommand\thechapter{\Roman{chapter}}
 
-  
-  
- \newcommand{\numero}{\thesection}
- 
+
+
+  \newcommand{\numero}{\thesection}
+
   \newcommand{\changenumero}[1]{\renewcommand{\numero}{##1}}
 
   \renewcommand \thesection{\@arabic\c@section} % Enleve le numero du chapitre courant
@@ -1708,52 +1723,52 @@
 
   \def\numberedsection{\@ifnextchar[%]
     \numberedsectionwithtwoarguments\numberedsectionwithoneargument}
-    
+
   \def\unnumberedsection{\@ifnextchar[%]
     \unnumberedsectionwithtwoarguments\unnumberedsectionwithoneargument}
-    
+
   \def\numberedsectionwithoneargument##1{\numberedsectionwithtwoarguments[##1]{##1}}
-  
+
   \def\unnumberedsectionwithoneargument##1{\unnumberedsectionwithtwoarguments[##1]{##1}}
-  
+
   \def\numberedsectionwithtwoarguments[##1]##2{%
     \ifhmode\par\fi
     \removelastskip
     \vskip .7ex \goodbreak
     \noindent
     \begingroup
-      \leavevmode\Large\bfseries\raggedright
-      \normalsize\bfseries
-      \numero\quad
-      ##2
-      \par
+    \leavevmode\Large\bfseries\raggedright
+    \normalsize\bfseries
+    \numero\quad
+    ##2
+    \par
     \endgroup
     \vskip .7ex \nobreak
   }
-  
+
   \def\unnumberedsectionwithtwoarguments[##1]##2{%
     \ifhmode\par\fi
     \removelastskip
     \vskip .7ex\goodbreak
     \noindent
     \begingroup
-      \leavevmode\normalfont\Large\bfseries\raggedright
-      \leavevmode\normalfont\Large\bfseries\raggedright
-      \normalsize\bfseries
-      ##2
-      \par
+    \leavevmode\normalfont\Large\bfseries\raggedright
+    \leavevmode\normalfont\Large\bfseries\raggedright
+    \normalsize\bfseries
+    ##2
+    \par
     \endgroup
     \vskip .7ex\nobreak
   }
-  
+
   \def\section{\refstepcounter{section}\changenumero{\thesection.} \sectionannexe}
 
   \def\subsection{\refstepcounter{subsection}\changenumero{\thesubsection} \sectionannexe}
-  
+
   \def\subsubsection{\refstepcounter{subsubsection}\changenumero{\thesubsubsection} \sectionannexe}
-  
+
   \def\paragraph{\refstepcounter{paragraph}\changenumero{\theparagraph} \sectionannexe}
-  
+
   \def\subparagraph{\refstepcounter{subparagraph}\changenumero{\thesubparagraph} \sectionannexe}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1767,31 +1782,31 @@
   %% Modification des annexes numérotées        % NOUVELLE DEMANDE : PAS REPETER LE TITRE SUR LA PAGE SUIVANTE
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \renewcommand{\@makechapterhead}[1]{{
-        \singlespacing\normalfont\bfseries%
-        \begin{center}
-          \MakeUppercase{\appendixname~\thechapter} % ANNEXE 1
-          \vskip 3\p@%
-          \MakeUppercase{##1} % Title of annexe
-        \end{center}
-        \thispagestyle{empty}%
-        \setcounter{section}{0}%
+      \singlespacing\normalfont\bfseries%
+      \begin{center}
+        \MakeUppercase{\appendixname~\thechapter} % ANNEXE 1
+        \vskip 3\p@%
+        \MakeUppercase{##1} % Title of annexe
+      \end{center}
+      \thispagestyle{empty}%
+      \setcounter{section}{0}%
 
-  }}
+    }}
 
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   %% Modification des annexes sans numéro (ne devrait pas être utilisé)
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \renewcommand{\@makeschapterhead}[1]{{
-    \thispagestyle{empty}
-       \singlespacing \normalfont\bfseries%
-        \begin{center}
-           \MakeUppercase{##1} % TITLE OF ANNEXE
-        \end{center}
-        \vskip 5\p@%
-        \thispagestyle{empty}
-        \setcounter{section}{0}%
+      \thispagestyle{empty}
+      \singlespacing \normalfont\bfseries%
+      \begin{center}
+        \MakeUppercase{##1} % TITLE OF ANNEXE
+      \end{center}
+      \vskip 5\p@%
+      \thispagestyle{empty}
+      \setcounter{section}{0}%
 
-  }}
+    }}
 
   \renewenvironment{figure}{\begin{figureap}}{\end{figureap}}
   \renewenvironment{table}{\begin{tableap}}{\end{tableap}}
@@ -1804,18 +1819,18 @@
 %
 \ifthenelse{\equal{\DocLang}{francais}}
 {
-\addto\captionsfrench{\def\figurename{{Figure}}}
-\addto\captionsfrench{\def\tablename{{Tableau}}}
-\addto\captionsfrench{\def\lstlistingname{{Extrait}}}
-\addto\captionsfrench{\def\lstlistlistingname{{Liste des extraits de code}}}
-\addto\captionsfrench{\def\algorithmname{{Algorithme}}}
-\addto\captionsfrench{\def\listfigurename{{Liste des figures}}}
-\addto\captionsfrench{\def\listalgorithmename{{Liste des algorithmes}}}
-\addto\captionsfrench{\def\CaptionSeparator{{\space\space}}}
+  \addto\captionsfrench{\def\figurename{{Figure}}}
+  \addto\captionsfrench{\def\tablename{{Tableau}}}
+  \addto\captionsfrench{\def\lstlistingname{{Extrait}}}
+  \addto\captionsfrench{\def\lstlistlistingname{{Liste des extraits de code}}}
+  \addto\captionsfrench{\def\algorithmname{{Algorithme}}}
+  \addto\captionsfrench{\def\listfigurename{{Liste des figures}}}
+  \addto\captionsfrench{\def\listalgorithmename{{Liste des algorithmes}}}
+  \addto\captionsfrench{\def\CaptionSeparator{{\space\space}}}
 }
 {
-\def\listalgorithmename{{List of algorithms}}
-\def\algorithmname{{Algorithm}}
+  \def\listalgorithmename{{List of algorithms}}
+  \def\algorithmname{{Algorithm}}
 
 }
 
@@ -1826,7 +1841,7 @@
 
 \renewenvironment{quote}{
   \linespread{1}\small\normalsize\list{}{\rightmargin\leftmargin}%
-  \item\relax
+\item\relax
 }{\endlist}
 
 %
@@ -1839,20 +1854,20 @@
   \@float{figure}%
   \centering
 }{%
-  \end@float
-  \vspace{-0.5\baselineskip} % supprime decalage vers bas ajout au dessus
+\end@float
+\vspace{-0.5\baselineskip} % supprime decalage vers bas ajout au dessus
 }
 
 \renewenvironment{table}[1][]{%
   \@float{table}%
   \centering
 }{%
-  \end@float 
+\end@float
 }
 
 %
 % Positionnement des flottants
-%   on privilégie htbp (here, top, bottom, next page)
+% on privilégie htbp (here, top, bottom, next page)
 %
 \def\fps@figure{htbp}
 \def\fps@table{htbp}
@@ -1870,37 +1885,37 @@
 \newif\ifartAuthSep
 \newif\ifartAffSep
 \newcommand*{\articleAuthors}[2]{%
- \parbox{\textwidth}{\center
-  \artAuthSepfalse
-  \artAuthScan#1\relax
-  \\
-  \artAffSepfalse
-  \artAffScan#2\relax
+  \parbox{\textwidth}{\center
+    \artAuthSepfalse
+    \artAuthScan#1\relax
+    \\
+    \artAffSepfalse
+    \artAffScan#2\relax
   }
 }
 
 \newcommand{\artAuthScan}[1]{%
   \ifx\relax#1\empty
   \else
-    \ifartAuthSep
-     , \relax
-    \else
-      \artAuthSeptrue
-    \fi
-      #1\relax\expandafter\artAuthScan
+  \ifartAuthSep
+  , \relax
+  \else
+  \artAuthSeptrue
+  \fi
+  #1\relax\expandafter\artAuthScan
   \fi
 }
 
 \newcommand{\artAffScan}[1]{%
   \ifx\relax#1\empty
   \else
-    \ifartAffSep
-      \\ \relax
-    \else
-      \artAffSeptrue
-    \fi
-   	#1 \relax
-    \expandafter\artAffScan
+  \ifartAffSep
+  \\ \relax
+  \else
+  \artAffSeptrue
+  \fi
+  #1 \relax
+  \expandafter\artAffScan
   \fi
 }
 
@@ -1912,8 +1927,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \def\cleardoublepage{\clearpage\if@twoside \ifodd\c@page\else
-    \hbox{}
-    \thispagestyle{empty}
-    \newpage
-    \if@twocolumn\hbox{}\newpage\fi\fi\fi}
+  \hbox{}
+  \thispagestyle{empty}
+  \newpage
+  \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 \makeatother \clearpage{\pagestyle{empty}\cleardoublepage}
